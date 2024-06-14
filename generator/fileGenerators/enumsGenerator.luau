@@ -27,7 +27,7 @@ local function generateInstanceInterfaces(includedClasses, lib)
 		end
 	end
 
-	file:writeLine('import { EnumItems, createEnumItems, EnumItem } from "../enumsHelper')
+	file:writeLine('import { EnumItems, createEnumItems, EnumItem } from "../enumsHelper"')
 	file:writeLine("export { EnumItems, EnumItem }")
 	file:writeLine("")
 	file:writeLine("export namespace Enum {")

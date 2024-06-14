@@ -1,5 +1,5 @@
 {
-  "name": "ui-api-interface",
+  "name": "rbx-ui",
   "version": "1.0.0",
   "description": "Typescript implementation of a small slice of the Roblox API that covers UI instances along with the Roblox DataTypes and Enums relevant to them",
   "main": "dist/index.js",

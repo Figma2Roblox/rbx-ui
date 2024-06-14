@@ -1,4 +1,4 @@
-import { EnumItems, createEnumItems, EnumItem } from "../enumsHelper
+import { EnumItems, createEnumItems, EnumItem } from "../enumsHelper"
 export { EnumItems, EnumItem }
 
 export namespace Enum {
