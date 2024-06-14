@@ -245,7 +245,7 @@ export interface UITextSizeConstraint extends UIConstraint {
 	MinTextSize: number;
 }
 
-declare interface CreatableInstances {
+export interface CreatableInstances {
 	Frame: Frame;
 	ImageButton: ImageButton;
 	ImageLabel: ImageLabel;
@@ -266,7 +266,7 @@ declare interface CreatableInstances {
 	UITextSizeConstraint: UITextSizeConstraint;
 }
 
-declare interface Instances extends CreatableInstances {
+export interface Instances extends CreatableInstances {
 	GuiBase: GuiBase;
 	GuiBase2d: GuiBase2d;
 	GuiButton: GuiButton;

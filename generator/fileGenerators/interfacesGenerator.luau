@@ -75,7 +75,7 @@ local function generateInstanceInterfaces(includedClasses, lib)
 	table.sort(creatableClasses)
 	table.sort(uncreatableClasses)
 
-	file:writeLine("declare interface CreatableInstances {")
+	file:writeLine("export interface CreatableInstances {")
 	file:tabIn()
 	for _, className in creatableClasses do
 		file:writeLine(`{className}: {className};`)
@@ -83,7 +83,7 @@ local function generateInstanceInterfaces(includedClasses, lib)
 	file:tabOut()
 	file:writeLine("}")
 	file:writeLine("")
-	file:writeLine("declare interface Instances extends CreatableInstances {")
+	file:writeLine("export interface Instances extends CreatableInstances {")
 	file:tabIn()
 	for _, className in uncreatableClasses do
 		file:writeLine(`{className}: {className};`)
@@ -91,7 +91,7 @@ local function generateInstanceInterfaces(includedClasses, lib)
 	file:tabOut()
 	file:writeLine("}")
 
-	return file.content, "instanceInterfaces.d.ts"
+	return file.content, "instanceInterfaces.ts"
 end
 
 return generateInstanceInterfaces

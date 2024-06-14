@@ -4,29 +4,29 @@ export { EnumItems, EnumItem }
 export namespace Enum {
 	export namespace FontWeight {
 		const enumItems = createEnumItems("FontWeight", [
+			{ Name: "Thin", Value: 100 },
+			{ Name: "Bold", Value: 700 },
+			{ Name: "ExtraLight", Value: 200 },
+			{ Name: "Regular", Value: 400 },
+			{ Name: "Light", Value: 300 },
+			{ Name: "Medium", Value: 500 },
+			{ Name: "Heavy", Value: 900 },
 			{ Name: "SemiBold", Value: 600 },
 			{ Name: "ExtraBold", Value: 800 },
-			{ Name: "Regular", Value: 400 },
-			{ Name: "Thin", Value: 100 },
-			{ Name: "Heavy", Value: 900 },
-			{ Name: "Medium", Value: 500 },
-			{ Name: "Bold", Value: 700 },
-			{ Name: "Light", Value: 300 },
-			{ Name: "ExtraLight", Value: 200 },
 		])
 		
-		export const [SemiBold, ExtraBold, Regular, Thin, Heavy, Medium, Bold, Light, ExtraLight] = enumItems
+		export const [Thin, Bold, ExtraLight, Regular, Light, Medium, Heavy, SemiBold, ExtraBold] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type FontWeight = EnumItem<"FontWeight">
 	
 	export namespace FontStyle {
 		const enumItems = createEnumItems("FontStyle", [
-			{ Name: "Normal", Value: 0 },
 			{ Name: "Italic", Value: 1 },
+			{ Name: "Normal", Value: 0 },
 		])
 		
-		export const [Normal, Italic] = enumItems
+		export const [Italic, Normal] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type FontStyle = EnumItem<"FontStyle">
@@ -44,24 +44,24 @@ export namespace Enum {
 	
 	export namespace SizeConstraint {
 		const enumItems = createEnumItems("SizeConstraint", [
+			{ Name: "RelativeXY", Value: 0 },
 			{ Name: "RelativeXX", Value: 1 },
 			{ Name: "RelativeYY", Value: 2 },
-			{ Name: "RelativeXY", Value: 0 },
 		])
 		
-		export const [RelativeXX, RelativeYY, RelativeXY] = enumItems
+		export const [RelativeXY, RelativeXX, RelativeYY] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type SizeConstraint = EnumItem<"SizeConstraint">
 	
 	export namespace BorderMode {
 		const enumItems = createEnumItems("BorderMode", [
-			{ Name: "Outline", Value: 0 },
 			{ Name: "Inset", Value: 2 },
 			{ Name: "Middle", Value: 1 },
+			{ Name: "Outline", Value: 0 },
 		])
 		
-		export const [Outline, Inset, Middle] = enumItems
+		export const [Inset, Middle, Outline] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type BorderMode = EnumItem<"BorderMode">
@@ -69,43 +69,43 @@ export namespace Enum {
 	export namespace AutomaticSize {
 		const enumItems = createEnumItems("AutomaticSize", [
 			{ Name: "None", Value: 0 },
-			{ Name: "Y", Value: 2 },
-			{ Name: "XY", Value: 3 },
 			{ Name: "X", Value: 1 },
+			{ Name: "XY", Value: 3 },
+			{ Name: "Y", Value: 2 },
 		])
 		
-		export const [None, Y, XY, X] = enumItems
+		export const [None, X, XY, Y] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type AutomaticSize = EnumItem<"AutomaticSize">
 	
 	export namespace FrameStyle {
 		const enumItems = createEnumItems("FrameStyle", [
-			{ Name: "ChatGreen", Value: 4 },
+			{ Name: "RobloxSquare", Value: 2 },
+			{ Name: "ChatBlue", Value: 1 },
 			{ Name: "ChatRed", Value: 5 },
 			{ Name: "Custom", Value: 0 },
-			{ Name: "RobloxSquare", Value: 2 },
 			{ Name: "RobloxRound", Value: 3 },
+			{ Name: "ChatGreen", Value: 4 },
 			{ Name: "DropShadow", Value: 6 },
-			{ Name: "ChatBlue", Value: 1 },
 		])
 		
-		export const [ChatGreen, ChatRed, Custom, RobloxSquare, RobloxRound, DropShadow, ChatBlue] = enumItems
+		export const [RobloxSquare, ChatBlue, ChatRed, Custom, RobloxRound, ChatGreen, DropShadow] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type FrameStyle = EnumItem<"FrameStyle">
 	
 	export namespace ButtonStyle {
 		const enumItems = createEnumItems("ButtonStyle", [
-			{ Name: "RobloxRoundButton", Value: 3 },
-			{ Name: "RobloxButtonDefault", Value: 1 },
-			{ Name: "Custom", Value: 0 },
-			{ Name: "RobloxButton", Value: 2 },
 			{ Name: "RobloxRoundDropdownButton", Value: 5 },
+			{ Name: "RobloxButtonDefault", Value: 1 },
+			{ Name: "RobloxButton", Value: 2 },
+			{ Name: "Custom", Value: 0 },
+			{ Name: "RobloxRoundButton", Value: 3 },
 			{ Name: "RobloxRoundDefaultButton", Value: 4 },
 		])
 		
-		export const [RobloxRoundButton, RobloxButtonDefault, Custom, RobloxButton, RobloxRoundDropdownButton, RobloxRoundDefaultButton] = enumItems
+		export const [RobloxRoundDropdownButton, RobloxButtonDefault, RobloxButton, Custom, RobloxRoundButton, RobloxRoundDefaultButton] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type ButtonStyle = EnumItem<"ButtonStyle">
@@ -125,36 +125,36 @@ export namespace Enum {
 		const enumItems = createEnumItems("ScaleType", [
 			{ Name: "Tile", Value: 2 },
 			{ Name: "Crop", Value: 4 },
+			{ Name: "Stretch", Value: 0 },
 			{ Name: "Fit", Value: 3 },
 			{ Name: "Slice", Value: 1 },
-			{ Name: "Stretch", Value: 0 },
 		])
 		
-		export const [Tile, Crop, Fit, Slice, Stretch] = enumItems
+		export const [Tile, Crop, Stretch, Fit, Slice] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type ScaleType = EnumItem<"ScaleType">
 	
 	export namespace TextDirection {
 		const enumItems = createEnumItems("TextDirection", [
-			{ Name: "LeftToRight", Value: 1 },
 			{ Name: "Auto", Value: 0 },
+			{ Name: "LeftToRight", Value: 1 },
 			{ Name: "RightToLeft", Value: 2 },
 		])
 		
-		export const [LeftToRight, Auto, RightToLeft] = enumItems
+		export const [Auto, LeftToRight, RightToLeft] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type TextDirection = EnumItem<"TextDirection">
 	
 	export namespace TextYAlignment {
 		const enumItems = createEnumItems("TextYAlignment", [
-			{ Name: "Top", Value: 0 },
-			{ Name: "Center", Value: 1 },
 			{ Name: "Bottom", Value: 2 },
+			{ Name: "Center", Value: 1 },
+			{ Name: "Top", Value: 0 },
 		])
 		
-		export const [Top, Center, Bottom] = enumItems
+		export const [Bottom, Center, Top] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type TextYAlignment = EnumItem<"TextYAlignment">
@@ -184,22 +184,22 @@ export namespace Enum {
 	
 	export namespace AspectType {
 		const enumItems = createEnumItems("AspectType", [
-			{ Name: "ScaleWithParentSize", Value: 1 },
 			{ Name: "FitWithinMaxSize", Value: 0 },
+			{ Name: "ScaleWithParentSize", Value: 1 },
 		])
 		
-		export const [ScaleWithParentSize, FitWithinMaxSize] = enumItems
+		export const [FitWithinMaxSize, ScaleWithParentSize] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type AspectType = EnumItem<"AspectType">
 	
 	export namespace DominantAxis {
 		const enumItems = createEnumItems("DominantAxis", [
-			{ Name: "Width", Value: 0 },
 			{ Name: "Height", Value: 1 },
+			{ Name: "Width", Value: 0 },
 		])
 		
-		export const [Width, Height] = enumItems
+		export const [Height, Width] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type DominantAxis = EnumItem<"DominantAxis">
@@ -230,11 +230,11 @@ export namespace Enum {
 	export namespace VerticalAlignment {
 		const enumItems = createEnumItems("VerticalAlignment", [
 			{ Name: "Bottom", Value: 2 },
-			{ Name: "Center", Value: 0 },
 			{ Name: "Top", Value: 1 },
+			{ Name: "Center", Value: 0 },
 		])
 		
-		export const [Bottom, Center, Top] = enumItems
+		export const [Bottom, Top, Center] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type VerticalAlignment = EnumItem<"VerticalAlignment">
@@ -253,61 +253,61 @@ export namespace Enum {
 	
 	export namespace StartCorner {
 		const enumItems = createEnumItems("StartCorner", [
-			{ Name: "BottomLeft", Value: 2 },
-			{ Name: "TopRight", Value: 1 },
 			{ Name: "TopLeft", Value: 0 },
+			{ Name: "BottomLeft", Value: 2 },
 			{ Name: "BottomRight", Value: 3 },
+			{ Name: "TopRight", Value: 1 },
 		])
 		
-		export const [BottomLeft, TopRight, TopLeft, BottomRight] = enumItems
+		export const [TopLeft, BottomLeft, BottomRight, TopRight] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type StartCorner = EnumItem<"StartCorner">
 	
 	export namespace UIFlexAlignment {
 		const enumItems = createEnumItems("UIFlexAlignment", [
-			{ Name: "SpaceBetween", Value: 3 },
-			{ Name: "None", Value: 0 },
-			{ Name: "SpaceAround", Value: 2 },
-			{ Name: "Fill", Value: 1 },
 			{ Name: "SpaceEvenly", Value: 4 },
+			{ Name: "SpaceAround", Value: 2 },
+			{ Name: "None", Value: 0 },
+			{ Name: "Fill", Value: 1 },
+			{ Name: "SpaceBetween", Value: 3 },
 		])
 		
-		export const [SpaceBetween, None, SpaceAround, Fill, SpaceEvenly] = enumItems
+		export const [SpaceEvenly, SpaceAround, None, Fill, SpaceBetween] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type UIFlexAlignment = EnumItem<"UIFlexAlignment">
 	
 	export namespace ItemLineAlignment {
 		const enumItems = createEnumItems("ItemLineAlignment", [
+			{ Name: "Automatic", Value: 0 },
+			{ Name: "End", Value: 3 },
+			{ Name: "Stretch", Value: 4 },
 			{ Name: "Center", Value: 2 },
 			{ Name: "Start", Value: 1 },
-			{ Name: "End", Value: 3 },
-			{ Name: "Automatic", Value: 0 },
-			{ Name: "Stretch", Value: 4 },
 		])
 		
-		export const [Center, Start, End, Automatic, Stretch] = enumItems
+		export const [Automatic, End, Stretch, Center, Start] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type ItemLineAlignment = EnumItem<"ItemLineAlignment">
 	
 	export namespace EasingStyle {
 		const enumItems = createEnumItems("EasingStyle", [
-			{ Name: "Sine", Value: 1 },
 			{ Name: "Back", Value: 2 },
-			{ Name: "Exponential", Value: 8 },
-			{ Name: "Circular", Value: 9 },
-			{ Name: "Quint", Value: 5 },
-			{ Name: "Quad", Value: 3 },
-			{ Name: "Elastic", Value: 7 },
-			{ Name: "Cubic", Value: 10 },
-			{ Name: "Bounce", Value: 6 },
-			{ Name: "Linear", Value: 0 },
 			{ Name: "Quart", Value: 4 },
+			{ Name: "Quad", Value: 3 },
+			{ Name: "Bounce", Value: 6 },
+			{ Name: "Cubic", Value: 10 },
+			{ Name: "Elastic", Value: 7 },
+			{ Name: "Quint", Value: 5 },
+			{ Name: "Circular", Value: 9 },
+			{ Name: "Exponential", Value: 8 },
+			{ Name: "Linear", Value: 0 },
+			{ Name: "Sine", Value: 1 },
 		])
 		
-		export const [Sine, Back, Exponential, Circular, Quint, Quad, Elastic, Cubic, Bounce, Linear, Quart] = enumItems
+		export const [Back, Quart, Quad, Bounce, Cubic, Elastic, Quint, Circular, Exponential, Linear, Sine] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type EasingStyle = EnumItem<"EasingStyle">
@@ -315,22 +315,22 @@ export namespace Enum {
 	export namespace EasingDirection {
 		const enumItems = createEnumItems("EasingDirection", [
 			{ Name: "Out", Value: 1 },
-			{ Name: "In", Value: 0 },
 			{ Name: "InOut", Value: 2 },
+			{ Name: "In", Value: 0 },
 		])
 		
-		export const [Out, In, InOut] = enumItems
+		export const [Out, InOut, In] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type EasingDirection = EnumItem<"EasingDirection">
 	
 	export namespace ApplyStrokeMode {
 		const enumItems = createEnumItems("ApplyStrokeMode", [
-			{ Name: "Contextual", Value: 0 },
 			{ Name: "Border", Value: 1 },
+			{ Name: "Contextual", Value: 0 },
 		])
 		
-		export const [Contextual, Border] = enumItems
+		export const [Border, Contextual] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type ApplyStrokeMode = EnumItem<"ApplyStrokeMode">
@@ -338,22 +338,22 @@ export namespace Enum {
 	export namespace LineJoinMode {
 		const enumItems = createEnumItems("LineJoinMode", [
 			{ Name: "Miter", Value: 2 },
-			{ Name: "Bevel", Value: 1 },
 			{ Name: "Round", Value: 0 },
+			{ Name: "Bevel", Value: 1 },
 		])
 		
-		export const [Miter, Bevel, Round] = enumItems
+		export const [Miter, Round, Bevel] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type LineJoinMode = EnumItem<"LineJoinMode">
 	
 	export namespace TableMajorAxis {
 		const enumItems = createEnumItems("TableMajorAxis", [
-			{ Name: "RowMajor", Value: 0 },
 			{ Name: "ColumnMajor", Value: 1 },
+			{ Name: "RowMajor", Value: 0 },
 		])
 		
-		export const [RowMajor, ColumnMajor] = enumItems
+		export const [ColumnMajor, RowMajor] = enumItems
 		export const GetEnumItems = () => enumItems
 	}
 	export type TableMajorAxis = EnumItem<"TableMajorAxis">

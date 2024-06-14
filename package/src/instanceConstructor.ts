@@ -1,4 +1,4 @@
-import { CreatableInstances, } from "./generated/instanceInterfaces";
+import { CreatableInstances } from "./generated/instanceInterfaces";
 import { instanceConstructors } from "./generated/instanceClasses";
 
 export const Instance = {
