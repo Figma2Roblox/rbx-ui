@@ -162,7 +162,7 @@ export class UDim2 implements UDim2 {
 			this.Y = args[1];
 		} else if (typeof args[0] === 'number' && typeof args[1] === 'number' && typeof args[2] === 'number' && typeof args[3] === 'number') {
 			this.X = new UDim(args[0], args[1]);
-			this.Y = new UDim(args[3], args[4]);
+			this.Y = new UDim(args[2], args[3]);
 		} else {
 			this.X = new UDim();
 			this.Y = new UDim();
