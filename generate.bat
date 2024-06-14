@@ -1,5 +1,5 @@
 @echo off
-
+cd /d "%~dp0"
 lune run cli/generate-in-lune
 if %errorlevel% neq 0 (
     echo:
