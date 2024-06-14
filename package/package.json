@@ -1,47 +1,36 @@
 {
-  "name": "rbx-ui",
+  "name": "@figma2rbx/rbx-ui",
   "version": "1.0.0",
   "description": "Typescript implementation of a small slice of the Roblox API that covers UI instances along with the Roblox DataTypes and Enums relevant to them",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "",
-  "license": "",
+  "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.4.0",
     "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-no-autofix": "^2.0.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
     "prettier": "^3.3.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.12.0"
   },
-  "eslintConfig": {
-    "plugins": [
-      "@typescript-eslint",
-      "@typescript-eslint/eslint-plugin",
-      "prettier"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:promise/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "root": true,
-    "rules": {
-      "prettier/prettier": "warn",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          "argsIgnorePattern": "^_",
-          "varsIgnorePattern": "^_",
-          "caughtErrorsIgnorePattern": "^_"
-        }
-      ]
-    }
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Figma2Roblox/rbx-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Figma2Roblox/rbx-ui/issues"
+  },
+  "homepage": "https://github.com/Figma2Roblox/rbx-ui#readme"
 }
