@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "cli"
+		},
+		{
+			"path": "generator"
+		},
+		{
+			"path": "package"
+		}
+	],
+	"settings": {
+		"luau-lsp.require.mode": "relativeToFile"
+	}
+}

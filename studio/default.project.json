@@ -1,0 +1,24 @@
+{
+  "name": "game-2",
+  "tree": {
+    "$className": "DataModel",
+
+    "Workspace": {
+      "README": {
+        "$path": "src/README.luau"
+      }
+    },
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Packages": {
+        "$path": "Packages"
+      },
+      "Generator": {
+        "$path": "../generator"
+      },
+      "Generate":{
+        "$path": "src/studio-generate.luau"
+      }
+    }
+  }
+}

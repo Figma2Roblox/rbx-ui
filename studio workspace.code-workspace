@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "studio"
+    },
+    {
+      "path": "generator"
+    },
+    {
+      "path": "package"
+    }
+  ],
+  "settings": {}
+}
