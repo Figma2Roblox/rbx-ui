@@ -59,15 +59,6 @@ local function generateInstanceConstructors(includedClasses, lib)
 			return a.propertyName < b.propertyName
 		end)
 
-		-- Insert stuff at the top
-		if not classApi:Superclass() then
-			table.insert(defaultMembers, 1, {
-				propertyName = "Parent",
-				type = "Instance | undefined",
-				defaultValue = "undefined",
-			})
-		end
-
 		table.insert(defaultMembers, 1, { propertyName = "Name", type = "string", defaultValue = `"{className}"` })
 		table.insert(
 			defaultMembers,
@@ -83,6 +74,31 @@ local function generateInstanceConstructors(includedClasses, lib)
 			local definition = member.defaultValue ~= nil and ` = {member.defaultValue}` or ""
 			file:writeLine(`{member.propertyName}{definition == "" and "!" or ""}: {member.type}{definition};`)
 		end
+
+		-- Define parent & GetChildren logic for base instance
+		if not classApi:Superclass() then
+			file:writeLine("_parent: Instances[keyof Instances] | undefined = undefined;")
+			file:writeLine("_children: Instances[keyof Instances][] = [];")
+			file:writeLine("")
+			file:writeLine("get Parent(): Instances[keyof Instances] | undefined {")
+			file:writeLine("	return this._parent;")
+			file:writeLine("}")
+			file:writeLine("")
+			file:writeLine("set Parent(_parent: Instances[keyof Instances] | undefined) {")
+			file:writeLine("	if (this._parent) {")
+			file:writeLine("		this._parent._children = this._parent._children.filter(child => child !== this);")
+			file:writeLine("	}")
+			file:writeLine("	this._parent = _parent;")
+			file:writeLine("	if (_parent !== undefined) {")
+			file:writeLine("		_parent._children.push(this);")
+			file:writeLine("	}")
+			file:writeLine("}")
+			file:writeLine("")
+			file:writeLine("GetChildren(): Instances[keyof Instances][] {")
+			file:writeLine("	return this._children")
+			file:writeLine("}")
+		end
+
 		file:tabOut()
 		file:writeLine("}")
 		file:writeLine("")

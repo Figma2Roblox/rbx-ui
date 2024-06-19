@@ -64,6 +64,15 @@ local function generateInstanceInterfaces(includedClasses, lib)
 			for _, interfaceMember in interfaceMembers do
 				file:writeLine(`{interfaceMember.propertyName}: {interfaceMember.type};`)
 			end
+
+			if not classApi:Superclass() then
+				file:writeLine("")
+				file:writeLine("Parent: Instances[keyof Instances] | undefined;")
+				file:writeLine("_parent: Instances[keyof Instances] | undefined;")
+				file:writeLine("_children: Instances[keyof Instances][];")
+				file:writeLine("GetChildren(): Instances[keyof Instances][];")
+			end
+
 			file:tabOut()
 			file:writeLine("}")
 		else

@@ -4,6 +4,11 @@ import { Color3, UDim, UDim2, Vector2, Rect, NumberSequence, ColorSequence, Font
 export interface Instance {
 	readonly ClassName: keyof Instances;
 	Name: string;
+	
+	Parent: Instances[keyof Instances] | undefined;
+	_parent: Instances[keyof Instances] | undefined;
+	_children: Instances[keyof Instances][];
+	GetChildren(): Instances[keyof Instances][];
 }
 
 export interface GuiBase extends Instance {}

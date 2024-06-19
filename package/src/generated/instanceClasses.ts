@@ -5,7 +5,26 @@ import { Enum } from "./enums";
 export class Instance implements Instance {
 	readonly ClassName: keyof Instances = "Instance";
 	Name: string = "Instance";
-	Parent: Instance | undefined = undefined;
+	_parent: Instances[keyof Instances] | undefined = undefined;
+	_children: Instances[keyof Instances][] = [];
+	
+	get Parent(): Instances[keyof Instances] | undefined {
+		return this._parent;
+	}
+	
+	set Parent(_parent: Instances[keyof Instances] | undefined) {
+		if (this._parent) {
+			this._parent._children = this._parent._children.filter(child => child !== this);
+		}
+		this._parent = _parent;
+		if (_parent !== undefined) {
+			_parent._children.push(this);
+		}
+	}
+	
+	GetChildren(): Instances[keyof Instances][] {
+		return this._children
+	}
 }
 
 export class GuiBase extends Instance implements GuiBase {
